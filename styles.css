@@ -1,0 +1,29 @@
+body {
+    background-color: aqua;
+}
+
+#container {
+    display: flex;
+    gap: 10px;
+}
+
+#left {
+ text-align: left;
+}
+
+.sketchboard {
+    border: 5px black solid;
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.square {
+    border: 1px blue solid;
+}
+
+.square:hover {
+    background-color: black;
+}
