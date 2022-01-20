@@ -11,10 +11,16 @@
     <h1>Etch your sketch!</h1>
     <div id="container">
         <div id="left">
-            <input type="text" placeholder="What dimensions do you want?">
-            <button id="canvasButton">Reset Canvas</button>
+            <label for="hoverToFill"><input type="radio" name="inputType" value="0" id="hover" checked>Hover to fill</label>
+            <label for="clickToFill"><input type="radio" name="inputType" value="1">Click to fill</label>
+            <br>
+            <input type="number" placeholder="What dimensions?" id="dimensions" min="1" max="100" value="16">
+            <button id="canvasButton">Create Canvas</button>
         </div>
-        <div class="sketchboard"></div>
+        <div>
+            <h3 id="measurements"></h3>
+            <div class="sketchboard"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

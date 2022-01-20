@@ -13,6 +13,7 @@ body {
 
 .sketchboard {
     border: 5px black solid;
+    background-color: white;
     display: grid;
     width: 600px;
     height: 600px;
@@ -24,6 +25,6 @@ body {
     border: 1px blue solid;
 }
 
-.square:hover {
-    background-color: black;
+#measurements {
+    margin-top: 0px;
 }
