@@ -1,2 +1,2 @@
 # Etch-a-Sketch
-Etch-a-Sketch project from TOP.
+Create a canvas, and fill in the squares with whatever you like!
