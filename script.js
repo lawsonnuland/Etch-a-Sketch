@@ -3,9 +3,9 @@ const dimensions = document.querySelector('#measurements');
 let div = document.createElement('div');
 div.classList.add('square');
 let count;
-let red;
-let green;
-let blue;
+let red = 0;
+let green = 0;
+let blue = 0;
 generate();
 
 const canvasButton = document.querySelector('#canvasButton');
