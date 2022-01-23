@@ -1,18 +1,33 @@
 body {
     background-color: aqua;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
 }
 
 #container {
     display: flex;
     gap: 10px;
+    border-top: black solid 1px;
 }
 
 #left {
- text-align: left;
+    text-align: left;
+    background-color: rgb(202, 253, 255);
+    margin-top: 40px;
+    padding: 0px 10px 10px 10px;
+    max-width: 30%;
 }
 
 .sketchboard {
     border: 5px black solid;
+    border-radius: 3px;
     background-color: white;
     display: grid;
     width: 600px;
@@ -27,4 +42,13 @@ body {
 
 #measurements {
     margin-top: 0px;
+}
+
+button {
+    padding: 5px;
+}
+
+#canvasButton {
+    margin-top: 10px;
+    font-weight: bold;
 }

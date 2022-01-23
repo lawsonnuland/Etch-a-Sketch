@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-A-Sketch!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Etch your sketch!</h1>
     <div id="container">
         <div id="left">
+            <h4>How it works!</h4>
+            <p>Input your color, then click the button to make sure your values are correct. From there, pick how many squares you want on each side.
+                Lastly, choose how you want to fill in the squares. When all that is done, click Create New Canvas!
+            </p>
+            <h4>Color</h4>
+            <input type="number" id="red" min="0" max="255" value="0">
+            <input type="number" id="green" min="0" max="255" value="0">
+            <input type="number" id="blue" min="0" max="255" value="0">
+            <button id="colorButton">Change fill color</button>
+            <h4>Dimensions</h4>
+            <input type="number" id="dimensions" min="1" max="100" value="16">
+            <h4>Input</h4>
             <label for="hoverToFill"><input type="radio" name="inputType" value="0" id="hover" checked>Hover to fill</label>
             <label for="clickToFill"><input type="radio" name="inputType" value="1">Click to fill</label>
             <br>
-            <input type="number" placeholder="What dimensions?" id="dimensions" min="1" max="100" value="16">
-            <button id="canvasButton">Create Canvas</button>
+            <button id="canvasButton">Create New Canvas</button>
         </div>
         <div>
             <h3 id="measurements"></h3>

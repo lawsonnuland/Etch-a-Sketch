@@ -3,12 +3,30 @@ const dimensions = document.querySelector('#measurements');
 let div = document.createElement('div');
 div.classList.add('square');
 let count;
+let red;
+let green;
+let blue;
 generate();
 
 const canvasButton = document.querySelector('#canvasButton');
 canvasButton.addEventListener('click', () => {
   generate();
 });
+
+const colorButton = document.querySelector('#colorButton');
+colorButton.addEventListener('click', () => {
+    red = document.querySelector('#red').value;
+    green = document.querySelector('#green').value;
+    blue = document.querySelector('#blue').value;
+    checkFillColor();
+});
+
+function checkFillColor() {
+    if (red > 255 || red < 0 || green > 255 || green < 0 || blue > 255 || blue < 0) {
+        alert("Color values must be between 0 and 255!");
+        return;
+    }
+}
 
 function generate() {
     count = document.querySelector('#dimensions').value;
@@ -33,13 +51,13 @@ function generate() {
     if (document.querySelector('input[name=inputType]:checked').value == 0) {
         squares.forEach((square) => {
             square.addEventListener('mouseover', ()=> {
-                square.style.background = 'black';
+                square.style.background = `rgb(${red}, ${green}, ${blue})`;
             }); 
         });
     } else {
         squares.forEach((square) => {
             square.addEventListener('click', ()=> {
-                square.style.background = 'black';
+                square.style.background = `rgb(${red}, ${green}, ${blue})`;
             }); 
         });
     }
