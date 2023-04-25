@@ -15,21 +15,38 @@
             <p>Input your color, then click the button to make sure your values are correct. From there, pick how many squares you want on each side.
                 Lastly, choose how you want to fill in the squares. When all that is done, click Create New Canvas!
             </p>
-            <h4>Color</h4>
-            <input type="number" id="red" min="0" max="255" value="0">
-            <input type="number" id="green" min="0" max="255" value="0">
-            <input type="number" id="blue" min="0" max="255" value="0">
-            <button id="colorButton">Change fill color</button>
+            <hr>
+
+            <div class="vertical-flex">
+                <h4>Color</h4>
+                <label for="red">Red:
+                    <input type="number" id="red" min="0" max="255" value="0" required>
+                </label>
+                <label for="green">Green:
+                    <input type="number" id="green" min="0" max="255" value="0" required>
+                </label>
+                <label for="blue">Blue:
+                    <input type="number" id="blue" min="0" max="255" value="0" required>
+                </label>
+                <button id="colorButton">Change fill color</button>
+            </div>
+            <hr>
+
             <h4>Dimensions</h4>
-            <input type="number" id="dimensions" min="1" max="100" value="16">
+            <label for="dimensions">How many squares do you want on each side?
+                <input type="number" id="dimensions" min="1" max="100" value="16" required>
+            </label>
+            <hr>
+
             <h4>Input</h4>
             <label for="hoverToFill"><input type="radio" name="inputType" value="0" id="hover" checked>Hover to fill</label>
             <label for="clickToFill"><input type="radio" name="inputType" value="1">Click to fill</label>
-            <br>
+            <hr>
+
             <button id="canvasButton">Create New Canvas</button>
         </div>
         <div>
-            <h3 id="measurements"></h3>
+            <h4 id="measurements"></h4>
             <div class="sketchboard"></div>
         </div>
     </div>
